@@ -4,31 +4,36 @@ A list of useful docker commands
 
 https://docs.docker.com/get-started/
 
-## List Docker CLI commands
+### List Docker CLI commands
 docker
 docker container --help
 
-## Display Docker version and info
+### Display Docker version and info
 docker --version
 docker version
 docker info
 
-## Excecute Docker image
+### Excecute Docker image
 docker run hello-world
 
-## List Docker images
+### List Docker images
 docker image ls
 
-## List Docker containers (running, all, all in quiet mode)
+### List Docker containers (running, all, all in quiet mode)
 docker container ls
 docker container ls --all
 docker container ls -a -q
 
-docker build -t friendlyhello .  # Create image using this directory's Dockerfile
-docker run -p 4000:80 friendlyhello  # Run "friendlyname" mapping port 4000 to 80
-docker run -d -p 4000:80 friendlyhello         # Same thing, but in detached mode
-docker container ls                                # List all running containers
-docker container ls -a             # List all containers, even those not running
+### Create image using this directory's Dockerfile
+docker build -t friendlyhello .  
+### Run "friendlyname" mapping port 4000 to 80
+docker run -p 4000:80 friendlyhello  
+### Same thing, but in detached mode
+docker run -d -p 4000:80 friendlyhello         
+### List all running containers
+docker container ls                
+### List all containers, even those not running
+docker container ls -a             
 docker container stop <hash>           # Gracefully stop the specified container
 docker container kill <hash>         # Force shutdown of the specified container
 docker container rm <hash>        # Remove specified container from this machine
